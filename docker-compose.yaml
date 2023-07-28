@@ -1,0 +1,12 @@
+services:
+  turbo:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+    command: pnpm dev
+    ports:
+      - 3000:3000
+      - 3001:3001
+    environment:
+      NODE_ENV: development
